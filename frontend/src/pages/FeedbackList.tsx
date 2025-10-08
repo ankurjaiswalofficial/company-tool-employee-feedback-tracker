@@ -52,8 +52,14 @@ export default function FeedbackList() {
                         <option value="bad">Bad</option>
                     </select>
                     <Link
+                        to="/"
+                        className="px-3 py-2 bg-gray-200 text-white rounded-xl shadow hover:bg-green-700"
+                    >
+                        🏠
+                    </Link>
+                    <Link
                         to="/add"
-                        className="px-6 py-3 bg-green-600 text-white rounded-xl shadow hover:bg-green-700"
+                        className="px-3 py-2 bg-green-600 text-white font-bold rounded-xl shadow hover:bg-green-700"
                     >
                         Give Feedback
                     </Link>

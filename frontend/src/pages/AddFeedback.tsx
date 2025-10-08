@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { API_URL } from "../config";
 
 export default function AddFeedback() {
@@ -25,6 +25,12 @@ export default function AddFeedback() {
                 onSubmit={handleSubmit}
                 className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md space-y-6"
             >
+                <Link
+                    to="/"
+                    className="px-3 py-2 bg-gray-200 text-white rounded-xl shadow hover:bg-green-700"
+                >
+                    🏠
+                </Link>
                 <h2 className="text-2xl font-bold text-gray-800 text-center">
                     Give Feedback
                 </h2>
