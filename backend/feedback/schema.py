@@ -1,13 +1,16 @@
-from pydantic import BaseModel
+from ninja import Schema
+from datetime import datetime
 
-class FeedbackIn(BaseModel):
-    name: str
+
+class FeedbackIn(Schema):
+    employee_name: str | None = None
     message: str
+    sentiment: str | None = None
 
 
-class FeedbackOut(BaseModel):
+class FeedbackOut(Schema):
     id: int
-    name: str
+    employee_name: str | None
     message: str
-    sentiment: str | None
-    created_at: str
+    sentiment: str
+    created_at: datetime
